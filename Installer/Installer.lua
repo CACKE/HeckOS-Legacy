@@ -99,7 +99,7 @@ local GitHubUserUrl = "https://raw.githubusercontent.com/"
 --------------------------------- Стадия стартовой загрузки всего необходимого ---------------------------------
 
 print("Downloading file list")
-applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
+applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "miad2401/OpenComputers/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
 print(" ")
 
 for i = 1, #applications do
@@ -207,8 +207,8 @@ do
   --Качаем язык
   ecs.info("auto", "auto", " ", " Installing language packages...")
   local pathToLang = "MineOS/System/OS/Installer/Language.lang"
-  getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/Installer/" .. _G.OSSettings.language .. ".lang", pathToLang)
-  getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/MineOS/License/" .. _G.OSSettings.language .. ".txt", "MineOS/System/OS/License.txt")
+  getFromGitHubSafely(GitHubUserUrl .. "miad2401/OpenComputers/master/Installer/" .. _G.OSSettings.language .. ".lang", pathToLang)
+  getFromGitHubSafely(GitHubUserUrl .. "miad2401/OpenComputers/master/MineOS/License/" .. _G.OSSettings.language .. ".txt", "MineOS/System/OS/License.txt")
   
   --Ставим язык
   lang = files.loadTableFromFile(pathToLang)
