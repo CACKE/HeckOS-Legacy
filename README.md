@@ -1,8 +1,11 @@
 # MineOS Legacy
 
-# Changes:
+Это Восстановленная Старая MineOS из форка miad2401
+Работает на Opencomputers 1.5, 1.6
 
-Redirect to This Repository, to make Installer Work
+# Изменения:
+
+Редирект ссылок на этот репозиторий в установщике
 
 
 # установка:
@@ -11,7 +14,15 @@ Redirect to This Repository, to make Installer Work
 
 # Требования: 
 
-OpenComputers 1.5
+OpenComputers 1.5 или 1.6
+
+3 уровень процессора
+
+3 уровень видеокарты
+
+3.5 уровень оперативной памяти
+
+интернет карта
 
 ![image](https://github.com/Govnosborkinoapps/OpenComputers/assets/83592338/9319b2a5-b74d-49aa-a714-2f37900d55f8)
 
