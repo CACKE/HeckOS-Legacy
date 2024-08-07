@@ -186,7 +186,7 @@ do
     {"EmptyLine"},
     {"CenterText", ecs.colors.orange, "Выбери язык блять"},
     {"EmptyLine"},
-    {"Select", 0xFFFFFF, ecs.colors.green, "Русский", "Английский"},
+    {"Select", 0xFFFFFF, ecs.colors.green, "Russian", "English"},
     {"EmptyLine"},
     {"CenterText", ecs.colors.orange, "Измени ебаные настройки"},
     {"EmptyLine"},
