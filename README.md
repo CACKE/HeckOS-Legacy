@@ -1,6 +1,6 @@
-# MineOS Legacy
+# HeckOS Legacy
 
-Это Восстановленная Старая MineOS из форка miad2401
+Это Хакинтош
 Работает на Opencomputers 1.5, 1.6
 
 # Изменения:
@@ -11,7 +11,7 @@
 # Установка:
 Скопируйте эту команду в OpenOS: 
     
-    wget https://raw.githubusercontent.com/Govnosborkinoapps/OpenComputers/master/Installer/Installer.lua
+    wget https://raw.githubusercontent.com/CACKE/HeckOS-Legacy/master/Installer/Installer.lua
 
 # Требования: 
 
