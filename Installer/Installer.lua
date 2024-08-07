@@ -26,9 +26,9 @@ if component.isAvailable("tablet") then table.insert(govno, "Планшет Об
 if gpu.maxResolution() < 150 then table.insert(govno, "Говно Видюха или Экран - HeckOS требует 3 уровень видео и 3 уровень экрана.") end
 
 --Проверяем оперативку
-if math.floor(computer.totalMemory() / 1024 ) < 1536 then table.insert(govno, "Мало озу - требует хотя бы 1536 KB ОЗУ.") end
+if math.floor(computer.totalMemory() / 1024 ) < 1536 then table.insert(govno, "Мало озу - требует хотя бы 1536 КБ ОЗУ.") end
 
-if fs.get("bin/edit.lua") == nil or fs.get("bin/edit.lua").isReadOnly() then table.insert(govno, "You can't install MineOS on floppy disk. Run \"install\" in command line and install OpenOS from floppy to HDD first. After that you're be able to install MineOS from Pastebin.") end
+if fs.get("bin/edit.lua") == nil or fs.get("bin/edit.lua").isReadOnly() then table.insert(govno, "Ты не можешь поставить ос на дискету") end
 
 --Если нашло какое-то несоответствие сис. требованиям, то написать, что именно не так
 if #govno > 0 then
@@ -88,7 +88,7 @@ local function getFromGitHubSafely(url, path)
     file:close()
     return success
   else
-    io.stderr:write("Can't download \"" .. url .. "\"!\n")
+    io.stderr:write("ни магу скачать \"" .. url .. "\"!\n")
     return -1
   end
 end
@@ -104,7 +104,7 @@ print(" ")
 
 for i = 1, #applications do
   if applications[i].preLoadFile then
-    print("Downloading \"" .. fs.name(applications[i].name) .. "\"")
+    print("Качаем \"" .. fs.name(applications[i].name) .. "\"")
     getFromGitHubSafely(GitHubUserUrl .. applications[i].url, applications[i].name)
   end
 end
@@ -178,25 +178,25 @@ do
   image.draw(math.ceil(xSize / 2 - 30), yWindow + 2, imageLanguages)
 
   --кнопа
-  drawButton("Select language",false)
+  drawButton("Выбери язык блять",false)
 
-  waitForClickOnButton("Select language")
+  waitForClickOnButton("Выбери язык блять")
 
   local data = ecs.universalWindow("auto", "auto", 36, 0x262626, true,
     {"EmptyLine"},
-    {"CenterText", ecs.colors.orange, "Select language"},
+    {"CenterText", ecs.colors.orange, "Выбери язык блять"},
     {"EmptyLine"},
-    {"Select", 0xFFFFFF, ecs.colors.green, "Russian", "English"},
+    {"Select", 0xFFFFFF, ecs.colors.green, "Русский", "Английский"},
     {"EmptyLine"},
-    {"CenterText", ecs.colors.orange, "Change some OS properties"},
+    {"CenterText", ecs.colors.orange, "Измени ебаные настройки"},
     {"EmptyLine"},
-    {"Switch", 0xF2B233, 0xffffff, 0xFFFFFF, "Download all Apps", true},
+    {"Switch", 0xF2B233, 0xffffff, 0xFFFFFF, "Скачать софт", true},
     {"EmptyLine"},
-    {"Switch", 0xF2B233, 0xffffff, 0xFFFFFF, "Download wallpapers", true},
+    {"Switch", 0xF2B233, 0xffffff, 0xFFFFFF, "Скачать обои", true},
     {"EmptyLine"},
-    {"Switch", 0xF2B233, 0xffffff, 0xFFFFFF, "Show help tips in OS", true},
+    {"Switch", 0xF2B233, 0xffffff, 0xFFFFFF, "Подсказки в ос", true},
     {"EmptyLine"},
-    {"Button", {ecs.colors.orange, 0x262626, "OK"}}
+    {"Button", {ecs.colors.orange, 0x262626, "Хуй"}}
   )
   downloadAllApps, downloadWallpapers, showHelpTips = data[2], data[3], data[4]
 
