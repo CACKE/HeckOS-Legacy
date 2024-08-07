@@ -17,16 +17,16 @@ shell.setWorkingDirectory("")
 local govno = {}
 
 print(" ")
-print("Analyzing computer for matching system requirements...")
+print("чекаем системные требования...")
 
 --Проверяем, не планшет ли это
-if component.isAvailable("tablet") then table.insert(govno, "Tablet PC detected - You can't install MineOS on tablet because of primitive GPU and Screen.") end
+if component.isAvailable("tablet") then table.insert(govno, "Планшет Обнаружен - Говно дейвайс(ошибка 0x33).") end
 
 --Проверяем GPU
-if gpu.maxResolution() < 150 then table.insert(govno, "Bad GPU or Screen - MineOS requires Tier 3 GPU and Tier 3 Screen.") end
+if gpu.maxResolution() < 150 then table.insert(govno, "Говно Видюха или Экран - HeckOS требует 3 уровень видео и 3 уровень экрана.") end
 
 --Проверяем оперативку
-if math.floor(computer.totalMemory() / 1024 ) < 1536 then table.insert(govno, "Not enough RAM - MineOS requires at least 1536 KB RAM.") end
+if math.floor(computer.totalMemory() / 1024 ) < 1536 then table.insert(govno, "Мало озу - требует хотя бы 1536 KB ОЗУ.") end
 
 if fs.get("bin/edit.lua") == nil or fs.get("bin/edit.lua").isReadOnly() then table.insert(govno, "You can't install MineOS on floppy disk. Run \"install\" in command line and install OpenOS from floppy to HDD first. After that you're be able to install MineOS from Pastebin.") end
 
@@ -39,7 +39,7 @@ if #govno > 0 then
   print(" ")
   return
 else
-  print("Done, everything's good. Proceed to downloading.")
+  print("Лады, все норм. Продолжаем качать.")
   print(" ")
 end
 
@@ -99,7 +99,7 @@ local GitHubUserUrl = "https://raw.githubusercontent.com/"
 --------------------------------- Стадия стартовой загрузки всего необходимого ---------------------------------
 
 print("Downloading file list")
-applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "Govnosborkinoapps/OpenComputers/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
+applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "CACKE/HeckOS-Legacy/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
 print(" ")
 
 for i = 1, #applications do
@@ -205,10 +205,10 @@ do
   ecs.saveOSSettings()
 
   --Качаем язык
-  ecs.info("auto", "auto", " ", " Installing language packages...")
+  ecs.info("auto", "auto", " ", " ставим языки...")
   local pathToLang = "MineOS/System/OS/Installer/Language.lang"
-  getFromGitHubSafely(GitHubUserUrl .. "Govnosborkinoapps/OpenComputers/master/Installer/" .. _G.OSSettings.language .. ".lang", pathToLang)
-  getFromGitHubSafely(GitHubUserUrl .. "Govnosborkinoapps/OpenComputers/master/MineOS/License/" .. _G.OSSettings.language .. ".txt", "MineOS/System/OS/License.txt")
+  getFromGitHubSafely(GitHubUserUrl .. "CACKE/HeckOS-Legacy/master/Installer/" .. _G.OSSettings.language .. ".lang", pathToLang)
+  getFromGitHubSafely(GitHubUserUrl .. "CACKE/HeckOS-Legacy/master/MineOS/License/" .. _G.OSSettings.language .. ".txt", "MineOS/System/OS/License.txt")
   
   --Ставим язык
   lang = files.loadTableFromFile(pathToLang)
