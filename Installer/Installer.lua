@@ -98,7 +98,7 @@ local GitHubUserUrl = "https://raw.githubusercontent.com/"
 
 --------------------------------- Стадия стартовой загрузки всего необходимого ---------------------------------
 
-print("Downloading file list")
+print("Качаем список ебаных файлов")
 applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "CACKE/HeckOS-Legacy/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
 print(" ")
 
